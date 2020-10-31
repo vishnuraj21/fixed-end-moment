@@ -9,9 +9,12 @@ function calculateUdlFem(event) {
     console.log('calculating fem for UDL')
     var load = document.getElementById("loadInput").value
     var length = document.getElementById("lengthInput").value
-    var fem = (load * length^2)/12
+    var fem = ((load * length**2)/12).toFixed(2)
+    var result = String("FEM" + "ab".sub() + "= -" + fem + ";    " + "  FEM" + "ba".sub() + "= " + fem)
 
-    document.getElementById("result").value = fem
+
+    document.getElementById("result").innerHTML = result
+
 
     console.log("The fixed end moment is: " + fem)
 }
@@ -24,11 +27,11 @@ function calculatePointLoadFem(event) {
     var length = document.getElementById("lengthInput").value
     var a = document.getElementById("distFixedEndInput1").value
     var b = document.getElementById("distFixedEndInput2").value
-    var femAB = (load * b^2 * a)/length^2
-    var femBA = (load * b * a^2)/length^2
-    var result = String("femAB: " + femAB + ";    " + "femBA: " + femBA)
+    var femAB = -(load * a * (b**2))/length**2
+    var femBA = (load * b * (a**2))/length**2
+    var result = String("FEM" + "ab".sub() + "= " + femAB + ";    " + "  FEM" + "ba".sub() + "= " + femBA)
 
-    document.getElementById("result").value = result
+    document.getElementById("result").innerHTML = result
 
     console.log('femAB: ' + femAB)
     console.log('femBA: ' + femBA)
