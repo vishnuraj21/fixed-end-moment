@@ -57,23 +57,41 @@
 
 .box1 {
    display: flex;
-   justify-content: space-around
+   justify-content: space-evenly;
 
 
 }
 
 .box1 .loadTypeButton:hover {
-    
+    transition: transform .2s;
+    transform: scale(1.01);
   }
 
 .box2 {
     display: flex;
+    justify-content: center;
 }
 
 .box3 {
     display: flex;
     flex-direction: column;
-    margin-right: 4%;
+    /* margin-right: 4%; */
+}
+
+.box3 .box4 {
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  color: #c5ecfd;
+  font-weight: bold;
+}
+
+.box3 .box4 .box5 {
+  border: none;
+}
+
+.box3 .box4 .box6 {
+  border: none;
 }
 
 .input,
@@ -122,4 +140,22 @@
     cursor: pointer;
     border-radius: 5px;
     text-align: center;
+    width: 40%;
+}
+
+@media screen and (max-width: 600px){
+  .contact-form{
+    flex-direction: column;
+  }
+  .msg textarea{
+    height: 80px;
+  }
+  .input-fields,
+  .msg{
+    width: 100%;
+  }
+}
+
+img {
+  width: 95%;
 }

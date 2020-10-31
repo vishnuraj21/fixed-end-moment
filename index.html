@@ -16,8 +16,8 @@
 
         <!-- buttons to set load type -->
         <div class="box1">
-            <button type="button" onClick="setTypePointLoad(event)", id="pointLoadBttn" class="loadTypeButton">Point Load</button><br><br>
-            <button type="button" onclick="setTypeUDL(event)" class="loadTypeButton">UDL</button> <br><br>
+            <button type="button" onClick="setTypePointLoad(event)", id="pointLoadBttn" class="loadTypeButton">Point Load</button>
+            <button type="button" onclick="setTypeUDL(event)" class="loadTypeButton">UDL</button> 
         </div>
         
         <!-- load type image -->
@@ -50,13 +50,26 @@
     
                 </div>
                 
-                
-                <!-- Calculate button -->
-                <button onClick="calculateFem(event)" class="calcButton">Calculate</button><br><br>
+                <div class=box4>
+
+                    <div class=box5>
+
+                        <!-- Calculate button -->
+                        <button onClick="calculateFem(event)" class="calcButton">Calculate</button><br><br>
+
+                    </div>
+
+                    
+
+                    <div class="box6"> 
+                        <!-- Output result -->
+                        <output id="result"></output> 
+                    </div>
     
-                <!-- Output result -->
-                <!-- <label for="result">Fixed end moment:  </label> -->
-                <output id="result"></output>  
+                    
+
+                </div>
+                 
             </form>
     
         </div>
